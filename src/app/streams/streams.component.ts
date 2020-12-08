@@ -54,6 +54,7 @@ export class StreamsComponent implements OnInit {
     this.listStreams.push(new Stream('Zaelia'));
     this.listStreams.push(new Stream('Imfiredup'));
     this.listStreams.push(new Stream('Preheat'));
+    this.listStreams.push(new Stream('JoshPriest'));
   }
 
   ngOnInit(): void {
