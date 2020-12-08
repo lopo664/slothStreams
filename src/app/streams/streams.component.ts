@@ -45,7 +45,6 @@ export class StreamsComponent implements OnInit {
     this.listStreams.push(new Stream('Atrocity'));
     this.listStreams.push(new Stream('limit_maximum'));
     this.listStreams.push(new Stream('Gapezilla'));
-    this.listStreams.push(new Stream('Imfiredup'));
     this.listStreams.push(new Stream('Maeveycakes'));
     this.listStreams.push(new Stream('Fragnance'));
     this.listStreams.push(new Stream('Rogerbrown'));
@@ -54,7 +53,9 @@ export class StreamsComponent implements OnInit {
     this.listStreams.push(new Stream('Naowh'));
     this.listStreams.push(new Stream('Zaelia'));
     this.listStreams.push(new Stream('Imfiredup'));
+    this.listStreams.push(new Stream('Preheat'));
   }
+
   ngOnInit(): void {
     this.loadInfo();
   }
