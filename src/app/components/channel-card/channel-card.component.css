@@ -22,3 +22,7 @@
 .cc-loaded {
   color: green;
 }
+
+.cc-cursor {
+  cursor: pointer;
+}

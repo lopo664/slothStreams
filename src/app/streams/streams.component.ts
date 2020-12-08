@@ -54,7 +54,6 @@ export class StreamsComponent implements OnInit {
     this.listStreams.push(new Stream('Naowh'));
     this.listStreams.push(new Stream('Zaelia'));
     this.listStreams.push(new Stream('Imfiredup'));
-    this.listStreams.push(new Stream('Drjayfisto'));
   }
   ngOnInit(): void {
     this.loadInfo();
@@ -63,11 +62,11 @@ export class StreamsComponent implements OnInit {
   loadStream(streamName: string) {
     this.twitchEmbedId.nativeElement.innerHTML = '';
     const embed = new TwitchEmbed.Embed('twitch-embed', {
-      width: 854,
-      height: 480,
+      width: '100%',
+      height: '800px',
       channel: streamName,
       layout: 'video',
-      autoplay: false
+      autoplay: true
     });
 
     embed.
