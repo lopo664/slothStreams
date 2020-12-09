@@ -55,6 +55,7 @@ export class StreamsComponent implements OnInit {
     this.listStreams.push(new Stream('Imfiredup'));
     this.listStreams.push(new Stream('Preheat'));
     this.listStreams.push(new Stream('JoshPriest'));
+    this.listStreams.push(new Stream('Jeathebelle'));
   }
 
   ngOnInit(): void {
@@ -92,6 +93,20 @@ export class StreamsComponent implements OnInit {
       }
       streamer.loading = false;
     }
+  }
+
+  async loadInfoOne(streamer: Stream) {
+    const user = await this.apiClient.helix.users.getUserByName(streamer.name);
+
+    if (user) {
+      const stream = await this.apiClient.helix.streams.getStreamByUserId(user.id);
+
+      if (stream) {
+        streamer.viewers = stream?.viewers || 0;
+        streamer.isLive = true;
+      }
+    }
+    streamer.loading = false;
   }
 
 }
